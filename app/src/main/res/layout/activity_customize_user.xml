@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.js960.hss.CustomizeUserActivity">
+
+    <TextView
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:id="@+id/customize_TextView_name"
+    android:text="User Name"
+        android:textSize="30dp"
+        android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/customize_EditText_name"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_EditText_name"
+        android:textSize = "20dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/customize_TextView_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_TextView_age"
+        android:text="Age"
+        android:textSize="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/customize_TextView_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/customize_EditText_name"/>
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_Spinner_age"
+        android:textSize = "40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/customize_TextView_age"
+        app:layout_constraintTop_toBottomOf="@+id/customize_EditText_name"
+        app:layout_constraintRight_toRightOf="parent"
+
+         />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_TextView_ColdFreq"
+        android:text="Cold Freqency"
+        android:textSize="15dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/customize_Spinner_coldFreq"
+        app:layout_constraintTop_toBottomOf="@+id/customize_TextView_age"
+        android:layout_marginTop="0dp" />
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_Spinner_coldFreq"
+        android:textSize = "40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/customize_TextView_ColdFreq"
+        app:layout_constraintTop_toBottomOf="@+id/customize_Spinner_age"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_TextView_serialNumber"
+        android:text="SerialNumber"
+        android:textSize="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/customize_TextView_ColdFreq"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/customize_EditText_serialNumber"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/customize_EditText_serialNumber"
+        android:textSize = "20dp"
+        android:gravity="center"
+        android:hint="Without '_'"
+        app:layout_constraintLeft_toRightOf="@+id/customize_TextView_serialNumber"
+        app:layout_constraintTop_toBottomOf="@+id/customize_TextView_ColdFreq"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/customize_button_send"
+            android:text="Send"
+            android:textSize="30dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+</android.support.constraint.ConstraintLayout>

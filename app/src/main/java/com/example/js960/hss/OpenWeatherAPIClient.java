@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.spec.ECField;
 
 /**
  * Created by js960 on 2017-11-22.
@@ -26,11 +27,11 @@ public class OpenWeatherAPIClient {
     private static String Cloud = "Cloud";
     private static String Pressure = "Pressure";
     private static String Finedust = "Finedust";
+    private static String Location = "Location";
 
     private static int mWeatherLength = 8;
 
-
-    final static String openWeatherURL = "http://192.168.0.15:3000/getAPI";
+    final static String openWeatherURL = "http://halarm.tk/getAPI";
     public Weather getWeather(double lat,double lon){
         Weather w = new Weather();
         //String urlString = openWeatherURL + "?lat="+lat+"&lon="+lon;
@@ -78,16 +79,18 @@ public class OpenWeatherAPIClient {
         //w.setCloudy();
 
         String[] weather = new String[mWeatherLength];
-        weather[0] = json.getString(HTemp);
-        weather[1] = json.getString(LTemp);
+        weather[0] = json.getString(LTemp);
+        weather[1] = json.getString(HTemp);
         weather[2] = json.getString(DTemp);
         weather[3] = json.getString(Humidity);
-        weather[4] = json.getString(Finedust);
-        weather[5] = json.getString(Precipitation);
-        weather[6] = json.getString(Pressure);
+        weather[4] = json.getString(Pressure);
+        weather[5] = json.getString(Finedust);
+        weather[6] = json.getString(Precipitation);
         weather[7] = json.getString(Cloud);
 
         w.setWeather(weather);
+        try{w.setStringLocation(json.getString(Location));}catch (Exception e){}
+
 
         return w;
 

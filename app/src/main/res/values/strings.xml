@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">HSS</string>
+    <string name="Error_GPS">Cannot Get Currrent Location. Please Try Later</string>
+    <string name="Error_Weather">Cannot get weather of current place</string>
+    <string name="Search_Location_First">Search Location Needed</string>
+    <string name="Error_putting_User_Object">Error putting User Occured</string>
+    <string name="Error_Setting_User_Info">Errir Setting User Info Occured</string>
+    <string name="Invalid_SerialNumber">Wrong Serial Number, Please Check Again</string>
+    <string name="Customizing_Finished">Customizing user succesfully finished.</string>
+    <string name="Error_Risk">"Error getting Risk. Please Try it later."</string>
 </resources>
